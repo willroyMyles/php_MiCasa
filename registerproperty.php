@@ -13,13 +13,12 @@
 <body>
     <?php include("partials/navbar.php");
 
-
     $url = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
     if (strpos($url, '?') !== false) {
         if (isset($_GET["reg"])) {
             echo "<div class='container'>
         <div class='alert alert-success alert-dismissible fade show' role='alert'>
-       <strong>Wonderful!</strong> Registraion file initialized. 
+       <strong>Wonderful!</strong> Registraion file initialized.
       <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
         <span aria-hidden='true'>&times;</span>
       </button>
@@ -28,7 +27,7 @@
         if (isset($_GET["loc"])) {
             echo "<div class='container'>
         <div class='alert alert-success alert-dismissible fade show' role='alert'>
-       <strong>Great!</strong> Location file written. 
+       <strong>Great!</strong> Location file written.
       <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
         <span aria-hidden='true'>&times;</span>
       </button>
@@ -37,7 +36,7 @@
         if (isset($_GET["desc"])) {
             echo "<div class='container'>
         <div class='alert alert-success alert-dismissible fade show' role='alert'>
-       <strong>Bien!</strong> Description file created. 
+       <strong>Bien!</strong> Description file created.
       <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
         <span aria-hidden='true'>&times;</span>
       </button>
@@ -69,7 +68,7 @@
                             <?php
 
                             $gen = false;
-                           
+
                             if (isset($_SESSION["user"]) && !empty($_SESSION["user"])) {
                                 $user = $_SESSION["user"];
                                 echo '<div class="row"> Name: ' . $user->name . '</div>';
@@ -105,7 +104,7 @@
                             <?php
 
                             $gen = false;
-                           
+
                             if (isset($_SESSION["location"]) && !empty($_SESSION["location"])) {
                                 $loc = $_SESSION["location"];
                                 echo '<div class="row"> Address 1: ' . $loc->address1 . '</div>';
@@ -123,7 +122,7 @@
                     <div class="card-footer text-muted">
                         <?php
                         if ($gen) {
-                            echo "<button name='locGen' class='btn btn-primary btn-block'> 
+                            echo "<button name='locGen' class='btn btn-primary btn-block'>
                             Generate File
                            </button>";
                         }
@@ -142,7 +141,7 @@
                     <div class="card-body">
                         <p class="card-text">
                             <?php
-                           
+
                             $gen = false;
                             if (isset($_SESSION["description"]) && !empty($_SESSION["description"])) {
                                 $des = $_SESSION["description"];
@@ -164,7 +163,7 @@
                     <div class="card-footer text-muted">
                         <?php
                         if ($gen) {
-                            echo "<button name='descGen' class='btn btn-primary btn-block'> 
+                            echo "<button name='descGen' class='btn btn-primary btn-block'>
                             Generate File
                            </button>";
                         }

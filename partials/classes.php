@@ -8,7 +8,17 @@ class User{
     var $password;
 
     function toString(){
-        return "". $this->name . $this->username . $this->email . $this->phone . $this->password;
+      return "===================New Information=================== \n
+      name : {$this->name} \n
+      username : {$this->username} \n
+      email : {$this->email} \n
+      phone : {$this->phone} \n
+      password : {$this->password}
+      ";
+    }
+
+    function getUserName(){
+      return "{$this->username}";
     }
 }
 
@@ -18,12 +28,32 @@ class Description{
     var $list;
     var $bed;
     var $bath;
-    var $size;        
-    var $price; 
-    
+    var $size;
+    var $price;
+
+    function printWithUserName($username){
+      return "===================New Information=================== \n
+      user name : {$username} \n
+      property type : {$this->prop} \n
+      building type : {$this->build} \n
+      listing type : {$this->list} \n
+      number of beds : {$this->bed} \n
+      number of baths : {$this->bath} \n
+      size : {$this->size} \n
+      price : $ {$this->price} \n
+      ";    }
+
+
     function toString(){
-        return "". $this->prop . $this->build . $this->list . $this->bed . $this->bath . $this->size . $this->price;
-    }
+      return "===================New Information=================== \n
+      property type : {$this->prop} \n
+      building type : {$this->build} \n
+      listing type : {$this->list} \n
+      number of beds : {$this->bed} \n
+      number of baths : {$this->bath} \n
+      size : {$this->size} \n
+      price : $ {$this->price} \n
+      ";    }
 }
 
 class Location{
@@ -31,9 +61,24 @@ class Location{
     var $address2;
     var $city;
     var $parish;
+
+function printWithUserName($username){
+  return "===================New Information=================== \n
+  user name : {$username} \n
+  address one : {$this->address1} \n
+  address two : {$this->address2} \n
+  city : {$this->city} \n
+  parish : {$this->parish} \n
+  ";
+}
+
     function toString(){
-        return "". $this->address1 . $this->address2 . $this->city . $this->parish ;
-    }
+      return "===================New Information=================== \n
+      address one : {$this->address1} \n
+      address two : {$this->address2} \n
+      city : {$this->city} \n
+      parish : {$this->parish} \n
+      ";    }
    }
 
 ?>

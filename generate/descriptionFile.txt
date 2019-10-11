@@ -1,1 +1,19 @@
-Vacant LotOffice SpacePurchase22200230Vacant LotOffice SpacePurchase22200230
+===================New Information=================== 
+
+      user name : willroymyles 
+
+      property type : Vacant Lot 
+
+      building type : Apartment 
+
+      listing type : Rent 
+
+      number of beds : 2 
+
+      number of baths : 2 
+
+      size : 12 
+
+      price : $ 121212 
+
+      
