@@ -11,7 +11,7 @@ if(isset($_POST["regGen"])){
 }
 if(isset($_POST["locGen"])){
 
-  if(!isset($_SESSION['user']) || empty($_SESSION['user']){
+  if(!isset($_SESSION['user']) || empty($_SESSION['user'])){
     header("Location: ../registerproperty.php?loc=failed");
     exit();
   }
@@ -24,10 +24,10 @@ if(isset($_POST["locGen"])){
     header("Location: ../registerproperty.php?loc=success");
 }
 if(isset($_POST["descGen"])){
-  if(!isset($_SESSION['user']) || empty($_SESSION['user']){
+  if(!isset($_SESSION['user']) || empty($_SESSION['user'])){
     header("Location: ../registerproperty.php?loc=failed");
     exit();
-  }  
+  }
     $descFile = "descriptionFile.txt"; // create file
     $handle = fopen($descFile,'a+') or die("cannot open file: ". $descFile); // open file
     $data = $_SESSION["description"]; // get info
@@ -35,5 +35,22 @@ if(isset($_POST["descGen"])){
     fwrite($handle, $data->printWithUserName($user->getUserName())); // write to file
     fclose($handle); //close file
     header("Location: ../registerproperty.php?desc=success");
+}
+
+if(isset($_POST['clearInfo'])){
+  unset($_SESSION['user']);
+  unset($_SESSION['location']);
+  unset($_SESSION['description']);
+  header("Location: ../registerproperty.php");
+}
+
+if(isset($_POST['delFiles'])){
+  $file = "locationFile.txt";
+  unlink($file);
+  $file = "descriptionFile.txt";
+  unlink($file);
+  $file = "registrationFile.txt";
+  unlink($file);
+  header("Location: ../registerproperty.php");
 }
 ?>

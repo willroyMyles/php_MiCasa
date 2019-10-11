@@ -174,11 +174,14 @@
 
 
             </div>
-            <div class="row my-3">
-                <div class="col-md-12">
-                    <button class="btn btn-secondary"> Clear Information</button>
-                </div>
-            </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-md-2">
+              <button name="clearInfo" class="btn btn-secondary"> Clear Information</button>
+          </div>
+          <div class="col-md-2">
+              <button name="delFiles" class="btn btn-secondary"> Delete Files</button>
+          </div>
         </div>
     </div>
 </form>
